@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 :root {
-    --backgroundColor: #E9D8A6;
-    --textColor: #001219;
-    --headerColor: #94D2BD;
-    --hoverColor: #BB3E03;
+  --backgroundColor: #e9d8a6;
+  --textColor: #001219;
+  --headerColor: #94d2bd;
+  --hoverColor: #bb3e03;
 }
 
 li,
@@ -13,79 +13,122 @@ h2,
 h3,
 a,
 p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--textColor);
-    text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--textColor);
+  text-decoration: none;
 }
 
 body {
-    background-color: var(--backgroundColor);
+  background-color: var(--backgroundColor);
 }
-
 
 /* Nav Header */
 header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-    background-color: var(--headerColor);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: var(--headerColor);
 }
 
 .logo {
-    cursor: pointer;
-    margin-right: auto;
+  cursor: pointer;
+  margin-right: auto;
 }
 
 .nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 .nav_links li a {
-    transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .nav_links li a:hover {
-    color: var(--hoverColor);
+  color: var(--hoverColor);
 }
 
 /* Common Styling */
 
-
-
-/* About Me Section */
-
-.aboutMe {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
-.aboutMe_header {
-    padding: 1rem;
-    margin-left: 5rem;
+main section {
+  display: flex;
+  flex-wrap: wrap;
 
+  gap: 1rem;
 }
 
-.aboutMe_header h2 {
-    font-size: 36px;
-    text-align: right;
+/* Common: Sidebar */
+.section_header {
+  /* The width when the sidebar _is_ a sidebar */
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+
+.section_header h2 {
+  font-size: 36px;
+  text-align: right;
 }
 
 hr {
-    border: 1px solid var(--textColor);
-    border-radius: 5px;
+  border: 1px solid var(--textColor);
+  border-radius: 5px;
 }
 
-.aboutMe_content {
-    padding: 1rem;
-    margin-right: 5rem;
+/* Common: Content */
+
+.section_content {
+  display: flex;
+
+  /* Grow from nothing */
+  flex-basis: 0;
+  flex-grow: 999;
+  /* Wrap when the header and content are equal width */
+  min-inline-size: 50%;
 }
 
-.aboutMe_content p {
-    padding: .5rem;
+/* About Me Section */
+
+.section_content p {
+  padding: 0.5rem;
 }
+
+/* Work Section */
+
+.work_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card1 {
+  height: 200px;
+  width: 300px;
+  background-image: url(./images/landingpage_sitecapture.JPG);
+  background-size: cover;
+}
+
+.card2 {
+  height: 200px;
+  width: 300px;
+  background-image: url(./images/prework_sitecapture.JPG);
+  background-size: cover;
+}
+
+.card3 {
+  height: 200px;
+  width: 300px;
+  background-image: url(./images/horiseon_sitecapture.jfif);
+  background-size: cover;
+}
+
+/* Contact Footer */
