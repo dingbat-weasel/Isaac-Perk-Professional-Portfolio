@@ -57,7 +57,6 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
     url("./images/dhalgren_copy.jpg");
 
-  /* Set a specific height */
   height: 50vh;
 
   /* Position and center the image to scale nicely on all screens */
@@ -75,18 +74,24 @@ header {
   transform: translate(-50%, -50%);
 }
 
+.hero_text h1 {
+  color: white;
+  font-size: 3rem;
+}
+
 /* Common Styling */
 
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+
+  padding-right: 1rem;
 }
 
 main section {
   display: flex;
-  flex-wrap: wrap;
 
   gap: 1rem;
 }
@@ -94,8 +99,9 @@ main section {
 /* Common: Sidebar */
 .section_header {
   /* The width when the sidebar _is_ a sidebar */
-  flex-basis: 20rem;
-  flex-grow: 1;
+  flex-basis: 30%;
+  flex-grow: 0;
+  order: 0;
 }
 
 .section_header h2 {
@@ -114,10 +120,11 @@ hr {
   display: flex;
 
   /* Grow from nothing */
-  flex-basis: 0;
-  flex-grow: 999;
+  flex-basis: 69%;
+  flex-grow: 0;
   /* Wrap when the header and content are equal width */
   min-inline-size: 50%;
+  order: 1;
 }
 
 /* About Me Section */
@@ -131,27 +138,35 @@ hr {
 .work_container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.card1 {
+.card {
+  display: flex;
+  width: calc(45% - (2px+1rem));
   height: 200px;
-  width: 300px;
-  background-image: url(./images/landingpage_sitecapture.JPG);
-  background-size: cover;
+
+  margin: 1rem;
+
+  background-color: firebrick;
+  border: solid 2px blue;
 }
 
-.card2 {
-  height: 200px;
-  width: 300px;
-  background-image: url(./images/prework_sitecapture.JPG);
-  background-size: cover;
+#priority_card {
+  flex-basis: 100%;
 }
 
-.card3 {
-  height: 200px;
-  width: 300px;
-  background-image: url(./images/horiseon_sitecapture.jfif);
-  background-size: cover;
+.card img {
+  width: 90%;
+  height: auto;
 }
 
 /* Contact Footer */
+
+.contact_container {
+  display: flex;
+
+  flex-shrink: 1;
+}
