@@ -40,13 +40,13 @@ header {
 }
 
 .logo img {
-  height: 70px;
+  height: 50px;
   width: auto;
 }
 
 .nav_links li {
   display: inline-block;
-  padding: 0px 10px;
+  padding: 0px 20px;
 }
 
 .nav_links li a {
@@ -138,8 +138,22 @@ hr {
 
 /* About Me Section */
 
-.section_content p {
-  padding: 0.5rem;
+.aboutMe_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutMe_container img {
+  padding: 1rem;
+  height: 300px;
+  width: auto;
+}
+
+.aboutMe_container p {
+  padding: 1rem;
+  margin-left: 1rem;
+  max-width: 500px;
 }
 
 /* Work Section */
