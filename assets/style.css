@@ -7,6 +7,7 @@
   --hoverColor: #5f0f40;
 }
 
+/* General Font Styling */
 li,
 h1,
 h2,
@@ -31,7 +32,7 @@ header {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  padding: 30px 10%;
+  padding: 20px 10%;
   background-color: var(--headerColor);
 }
 
@@ -40,7 +41,7 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
   width: auto;
 }
 
@@ -83,7 +84,7 @@ header {
 
 .hero_text h1 {
   color: white;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 /* Common Styling */
@@ -107,12 +108,10 @@ main section {
   max-width: 1400px;
 }
 
-/* Common: Sidebar */
+/* Common: Sidebar Headers */
 .section_header {
-  /* The width when the sidebar _is_ a sidebar */
   flex-basis: 30%;
   flex-grow: 0;
-  order: 0;
 }
 
 .section_header h2 {
@@ -133,7 +132,6 @@ hr {
   flex-grow: 0;
   /* Wrap when the header and content are equal width */
   min-inline-size: 50%;
-  order: 1;
 }
 
 /* About Me Section */
@@ -191,6 +189,7 @@ hr {
   border: solid 5px var(--hoverColor);
 }
 
+/* Card header and description overlay */
 .card_description {
   position: absolute;
   height: 100%;
@@ -201,6 +200,7 @@ hr {
   cursor: pointer;
 }
 
+/* Card image reveal on hover */
 .card_description:hover {
   background: linear-gradient(to top, rgba(15, 76, 92, 0.85), transparent);
 }
@@ -239,4 +239,56 @@ hr {
 
 .contact_container ul a {
   font-size: 24px;
+}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 1100px) {
+  .card {
+    width: calc(35% - (2px+1rem));
+
+    flex-grow: 1;
+    margin: 0.5rem;
+  }
+
+  .card_description {
+    padding-top: 0px;
+  }
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  main section {
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  .nav_links li {
+    padding: 5px 10px;
+  }
+  .nav_links li a {
+    font-size: 16px;
+  }
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  .aboutMe_container {
+    flex-direction: column;
+  }
+
+  .card {
+    height: 300px;
+    flex-basis: 100%;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav_links li {
+    padding: 5px 10px;
+  }
+  .nav_links li a {
+    font-size: 16px;
+  }
 }
